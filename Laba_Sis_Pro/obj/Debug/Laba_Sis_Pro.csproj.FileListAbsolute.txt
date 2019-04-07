@@ -31,3 +31,4 @@ C:\Users\DNS\Desktop\Laba_Sis_Pro\Laba_Sis_Pro\obj\Debug\Laba_Sis_Pro.csproj.Gen
 C:\Users\DNS\Desktop\Laba_Sis_Pro\Laba_Sis_Pro\obj\Debug\Laba_Sis_Pro.csproj.CoreCompileInputs.cache
 C:\Users\DNS\Desktop\Laba_Sis_Pro\Laba_Sis_Pro\obj\Debug\Laba_Sis_Pro.exe
 C:\Users\DNS\Desktop\Laba_Sis_Pro\Laba_Sis_Pro\obj\Debug\Laba_Sis_Pro.pdb
+C:\Users\DNS\Desktop\Laba_Sis_Pro\Laba_Sis_Pro\bin\Debug\Asm.dll

@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using Asm;
 
 namespace Laba_Sis_Pro
 {
     public partial class Form1 : Form
     {
+        
         private string filename;
         private bool showdialog = true;
         public Form1()
@@ -160,6 +163,39 @@ namespace Laba_Sis_Pro
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+        }
+
+        private void x_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label3.Text = "Результат:";
+            byte a = Convert.ToByte(x.Text);
+            byte b = Convert.ToByte(y.Text);
+            object[] data = { a, b };
+            Type type = typeof(Asm.Asm);
+
+
+            if (radioButton1.Checked)
+            {
+                MethodInfo method1 = type.GetMethod(nameof(Asm.Asm.Func1));
+                label3.Text += method1.Invoke(null, data);
+                //  Asm.Asm.Func1(a,b).ToString();
+            }
+            else
+            {
+                MethodInfo method2 = type.GetMethod(nameof(Asm.Asm.Func2));
+                label3.Text += method2.Invoke(null, data);
+                // label3.Text += Asm.Asm.Func2(a, b).ToString();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
